@@ -1,0 +1,53 @@
+{
+  "name": "frontend-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:front": "SET NODE_ENV=production & webpack --mode production",
+    "build:back": "SET NODE_ENV=production & node server.js --mode production",
+    "dev:front": "SET NODE_ENV=development & webpack -w",
+    "dev:back": "SET NODE_ENV=development & nodemon server.js public/app.bundle.js --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.2",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "nodemon": "^2.0.3",
+    "postcss-cli": "^7.1.0",
+    "postcss-loader": "^3.0.0",
+    "standard": "^14.3.3",
+    "tailwindcss": "^1.2.0",
+    "webpack": "^4.42.1",
+    "webpack-bundle-analyzer": "^3.7.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "standard": {
+    "ignore": [
+      "/public/**",
+      "/server.js",
+      "/server.js.map"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
+  }
+}
